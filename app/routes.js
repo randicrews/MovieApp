@@ -7,9 +7,9 @@ module.exports = function(app, passport, db) {
         res.render('index.ejs');
     });
 
-    // app.get('/styles.css', (req, res) => {
-    //   res.sendFile(__dirname + '/public/styles.css');
-    // })
+    app.get('/styles.css', (req, res) => {
+      res.sendFile(__dirname + '/public/styles.css');
+    })
 
     // app.get('/main.js', (req, res) => {
     //   res.sendFile(__dirname + '/public/main.js');
@@ -51,7 +51,7 @@ module.exports = function(app, passport, db) {
         thisOver = data.results[0].overview
         db.collection('movies').find({user: req.user.local.email}).toArray((err, result) => {
           if (err) return console.log(err)
-          res.render('profile.ejs', {
+          res.render('search.ejs', {
             user : req.user,
             myMovies: result,
             // thisMovies: '',
@@ -59,16 +59,9 @@ module.exports = function(app, passport, db) {
             thisTitle: thisTitle
           })
         })
-        // res.render('profile.ejs', { 
-        //   user : req.user,
-        //   myMovies: [],
-        //   thisTitle: thisTitle,
-        //   thisOver: thisOver})
-        //   return
       })
       .catch(error => {
         console.error(error)
-        res.send('Error occurred while fetching data from API')
       })
     })
 

@@ -4,13 +4,18 @@
     <title>moviematchmaker</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/504ea75c01.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div>
+<body class="signup container">
+<div class="col-sm-6 col-sm-offset-3">
 <div>
 
-    <h1><span></span>signup</h1>
+    <h1><span class="fa fa-sign-in">signup</span></h1>
 
     <% if (message.length > 0) { %>
         <div class="alert alert-danger"><%= message %></div>
@@ -18,16 +23,16 @@
 
     <!-- LOGIN FORM -->
     <form action="/signup" method="post">
-        <div>
+        <div class="form-group">
             <label>email</label>
             <input type="text" name="email">
         </div>
-        <div>
+        <div class="form-group">
             <label>password</label>
             <input type="password" name="password">
         </div>
 
-        <button type="submit">let's go</button>
+        <button type="submit" class="btn-default">let's go</button>
     </form>
 
     <hr>

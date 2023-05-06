@@ -15,11 +15,11 @@
 <div class="container">
 
     <div class="container">
-    <a href="/logout" class="btn-default btn-sm"">Logout</a>
+    <a href="/logout">Logout</a>
     </div>
-    <div class="row">
+    <div>
         <!-- LOCAL INFORMATION -->
-            <div lass="col-sm-6">
+            <div>
                 <!-- <h3><%= user.local.email %></h3> -->
                 <% if (user.local.email) { %>
                     <!-- <p>
@@ -33,9 +33,9 @@
                     <a href="/login">login</a>
                 <% } %>
             </div>
-        <div class="container col-sm-6">
+        <div class="container">
           <h2>search movie</h2>
-          <form action="/search/:mov" method="POST">
+          <form action="/profile/:mov" method="GET">
             <input type="text" id="movie" placeholder="message" name="mov">
             <button type="submit" id="">Submit</button>
           </form>

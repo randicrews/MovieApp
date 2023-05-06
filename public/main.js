@@ -2,6 +2,23 @@ var heart = document.getElementsByClassName("fa-heart");
 // document.getElementById('addMov').addEventListener('click', addMov)
 // document.getElementById('findMov').addEventListener('click', findMov)
 
+
+document.querySelector('form').addEventListener('submit', (event) => {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  event.target.submit();
+});
+
+
+
+
+
+
+
+
+
+
 function findMov(){
   const title = document.getElementById('movieSearch').value
   fetch(`/movie/${title}`, {
