@@ -39,7 +39,7 @@ module.exports = function(app, passport, db) {
 
 // interact with movies ===============================================================
 
-    app.post('/search/:mov', (req, res) => {
+    app.post('/search/:mov/', (req, res) => {
       let mov = req.body.mov
       // console.log(req.body.mov)
       url = `https://api.themoviedb.org/3/search/movie?api_key=e54287ed12091ea4716ed53e3db2812f&language=en-US&query=${mov}&page=1&include_adult=false`

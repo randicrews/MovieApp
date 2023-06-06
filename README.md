@@ -1,3 +1,14 @@
+#MOVIE MAP
+
+## USING 
+- HTML
+- CSS
+- JAVASCRIPT
+- NODE.JS
+- MONGO DB x MONGOOSE
+- EXPRESS
+
+
 ## Installation
 
 1. Clone repo
@@ -6,9 +17,8 @@
 ## Usage
 
 1. run `node server.js`
-2. Navigate to `localhost:8000`
+2. Navigate to `localhost:8071`
 
 ## Credit
 
 Modified from Scotch.io's auth tutorial & Leon Noel's Savage Auth
-# MovieApp
